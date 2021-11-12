@@ -15,6 +15,7 @@ class HomeScreen(Frame):
             ("ID", "id"),
             ("Comprador", "comprador"),
             ("Valor", "valor"),
+            ("Produto", "produto"),
             ("Data de Compra", "data_de_compra"),
             ("Data de Pagamento", "data_de_pagamento"),
         ]
@@ -29,7 +30,7 @@ class HomeScreen(Frame):
         nova_conta.place(x=10, y=10, width=80, height=25)
 
         sair = Button(self, text="Sair", command=self.perform_sair)
-        sair.place(x=510, y=10, width=80, height=25)
+        sair.place(x=APP_WIDTH - 90, y=10, width=80, height=25)
 
         self.table = Treeview(self)
         self.table.place(x=10, y=80, width=APP_WIDTH - 20, height=APP_HEIGHT - 120)
@@ -63,6 +64,7 @@ class HomeScreen(Frame):
                 conta['id'],
                 conta['comprador'],
                 conta['valor'],
+                conta['produto'],
                 conta['data_de_compra'],
                 conta['data_de_pagamento'],
             )

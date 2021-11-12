@@ -16,18 +16,18 @@ class LoginScreen(DefaultFrame.Frame):
         self.username_e = DefaultEntry.Entry(
             self, placeholder="Type your username here"
         )
-        self.username_l.place(x=200, y=90)
-        self.username_e.place(x=200, y=110)
+        self.username_l.place(x=250, y=90)
+        self.username_e.place(x=250, y=110)
 
         self.password_l = DefaultLabel.Label(self, text="Password")
         self.password_e = DefaultEntry.Entry(self, placeholder="********", show="*")
-        self.password_l.place(x=200, y=160)
-        self.password_e.place(x=200, y=180)
+        self.password_l.place(x=250, y=160)
+        self.password_e.place(x=250, y=180)
 
         self.button = DefaultButton.Button(
             self, text="Entrar", command=self.perform_login
         )
-        self.button.place(x=200, y=240)
+        self.button.place(x=250, y=240)
 
     def clean_entries(self):
         self.password_e.delete(0, END)

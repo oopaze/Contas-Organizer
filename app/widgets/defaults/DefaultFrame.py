@@ -14,7 +14,7 @@ class Frame(Frame):
 
         self.id = list(self.master.children.keys())[-1]
         self.title = Label(self, text=self.title, font=("Monospace", 18))
-        self.title.place(x=100, y=30, width=400, height=30)
+        self.title.place(x=150, y=30, width=400, height=30)
 
         self.build_widgets()
 

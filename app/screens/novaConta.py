@@ -34,9 +34,9 @@ class NovaContaScreen(Frame):
 
     def build_widgets(self):
         for i, data in enumerate(self.form_fields):
-            x, y = 50, (i * 50) + 80
+            x, y = 130, (i * 50) + 80
             if i / 4 >= 1:
-                x, y = 350, y - 200
+                x, y = 370, y - 200
 
             Label(self, text=data[0]).place(x=x, y=y + 5, height=20)
             widget_kwargs = {}
@@ -55,15 +55,15 @@ class NovaContaScreen(Frame):
                 self.inputs.append({data[2]: initialized_widget})
 
         pagamentoCombobox = Combobox(self, values=self.METODOS_DE_PAGAMENTO)
-        pagamentoCombobox.place(x=50, y=(3 * 50) + 105, width=200)
+        pagamentoCombobox.place(x=130, y=(3 * 50) + 105, width=200)
         self.inputs.append({"metodo_de_pagamento": pagamentoCombobox})
 
         submit = Button(self, text="Salvar", command=self.submit_form)
-        submit.place(x=190, y=300, width=100, height=30)
+        submit.place(x=240, y=300, width=100, height=30)
         voltar = Button(
             self, text="Voltar", command=lambda: self.switch_screen(to='home')
         )
-        voltar.place(x=310, y=300, width=100, height=30)
+        voltar.place(x=360, y=300, width=100, height=30)
 
     def submit_form(self):
         data = self.validate_form()
