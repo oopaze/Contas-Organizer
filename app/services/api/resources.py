@@ -1,8 +1,11 @@
 from typing import Dict, List
 from functools import partial
-from time import sleep
+from collections import namedtuple
 
 import requests
+
+
+fake_response = namedtuple('Response', "status_code")
 
 
 class BaseResource:
@@ -48,8 +51,10 @@ class BaseResource:
 
         if self.Meta.auth:
             kwargs['headers'] = self.headers
-
-        return request_action(action_url, **kwargs)
+        try:
+            return request_action(action_url, **kwargs)
+        except:
+            return fake_response(status_code=500)
 
     class Meta:
         name = ""

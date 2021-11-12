@@ -71,9 +71,10 @@ class NovaContaScreen(Frame):
             data['metodo_de_pagamento'] = self.METODOS_DE_PAGAMENTO_DICT[
                 data['metodo_de_pagamento']
             ]
-            self.client.conta.create(data=data)
-            self.clean_form()
-            self.switch_screen(to="home")
+            if self.master.auth.check_token(self.logout_user):
+                self.client.conta.create(data=data)
+                self.clean_form()
+                self.switch_screen(to="home")
 
     def clean_form(self):
         for field in self.inputs:
