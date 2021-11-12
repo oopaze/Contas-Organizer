@@ -42,12 +42,6 @@ class NovaContaScreen(Frame):
             widget_kwargs = {}
             widget = Entry
 
-            if 'int' in data[1]:
-                widget_kwargs['validatecommand'] = (
-                    self.master._validations['only_number'],
-                    "%s",
-                )
-
             if data[1]:
                 initialized_widget = widget(self, **widget_kwargs)
                 initialized_widget.place(x=x, y=y + 25, height=25, width=200)
