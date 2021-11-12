@@ -1,3 +1,3 @@
 # Contas Organizer
 
-A Tkinter App made to help to manage my bills and credit cards
+A Tkinter App made to manage my bills and credit cards
