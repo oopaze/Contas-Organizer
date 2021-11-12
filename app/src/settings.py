@@ -12,3 +12,7 @@ ALERTS = {
     'success': {"fg": "#53875f", "bg": "#d4edda"},
     'info': {"fg": "#0f5763", "bg": "#d1ecf1"},
 }
+
+
+API_URL = 'http://localhost:8000/'
+API_KEY = ''

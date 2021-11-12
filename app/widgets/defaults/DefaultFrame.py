@@ -14,7 +14,7 @@ class Frame(Frame):
 
         self.id = list(self.master.children.keys())[-1]
         self.title = Label(self, text=self.title, font=("Monospace", 18))
-        self.title.place(x=200, y=30, width=200, height=30)
+        self.title.place(x=100, y=30, width=400, height=30)
 
         self.build_widgets()
 
@@ -33,3 +33,9 @@ class Frame(Frame):
         self.destroy()
         screen_class = self.master.screens[to]
         screen_class(self.master).place(**kwargs)
+
+    def logout_user(self):
+        self.master.auth.access = ""
+        self.master.auth.refresh = ""
+
+        self.switch_screen(to="login")

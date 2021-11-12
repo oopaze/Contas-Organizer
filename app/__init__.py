@@ -1,22 +1,34 @@
 from tkinter import Tk
 
-from app.screens.home import HomeScreen
-from app.widgets.MessageFrame import MessageFrame
-from app.screens.login import LoginScreen
-from .src.settings import ALERTS, APP_WIDTH, APP_HEIGHT, APP_BG_COLOR
+from app.services.api.authentication import AuthUser
+
+from .screens.home import HomeScreen
+from .screens.login import LoginScreen
+from .screens.novaConta import NovaContaScreen
+from .widgets.MessageFrame import MessageFrame
+from .widgets.defaults.DefaultEntry import Entry
+from .src.settings import ALERTS, APP_WIDTH, APP_HEIGHT
+
+from .services.api.client import Client
 
 
 class App(Tk):
+    _validations = {}
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.configure_base()
+        self.client = Client()
+        self.auth = AuthUser(self.client, self)
 
         self.screens = {
             "home": HomeScreen,
             "login": LoginScreen,
+            "novaConta": NovaContaScreen,
         }
 
         self.build_widgets()
+        self.register_validations()
 
     def configure_base(self):
         self.geometry(f"{APP_WIDTH}x{APP_HEIGHT}")
@@ -35,3 +47,6 @@ class App(Tk):
 
     def run(self):
         self.mainloop()
+
+    def register_validations(self):
+        self._validations.update({"only_number": self.register(Entry.only_numbers)})

@@ -43,3 +43,7 @@ class Entry(Entry):
             self.put_placeholder()
             self.placeholder_on = True
             self.configure(font=self.placeholder_font)
+
+    @staticmethod
+    def only_numbers(char):
+        return char.isdigit()
