@@ -10,7 +10,6 @@ class LoginScreen(DefaultFrame.Frame):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.is_logged = False
 
     def build_widgets(self):
         self.username_l = DefaultLabel.Label(self, text="Username")
@@ -37,11 +36,12 @@ class LoginScreen(DefaultFrame.Frame):
         username = self.username_e.get()
         password = self.password_e.get()
 
+        is_authenticated = self.master.auth.login(username, password)
+
         if not (username and password):
             self.master.show_message("Os campos username e password são obrigatórios")
 
-        elif username == "oopaze" and password == "mae123":
-            self.is_logged = True
+        elif is_authenticated:
             self.clean_entries()
             self.switch_screen(to="home")
             self.master.show_message("Usuário logado com sucesso", flag="info")
