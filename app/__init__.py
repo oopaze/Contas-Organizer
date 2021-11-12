@@ -15,8 +15,6 @@ from .services.api.client import Client
 
 
 class App(Tk):
-    _validations = {}
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.configure_base()
@@ -30,7 +28,6 @@ class App(Tk):
         }
 
         self.build_widgets()
-        self.register_validations()
 
     def configure_base(self):
         self.geometry(f"{APP_WIDTH}x{APP_HEIGHT}")
