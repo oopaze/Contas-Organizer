@@ -1,3 +1,5 @@
+import base64
+
 from tkinter import Tk
 
 from app.services.api.authentication import AuthUser
@@ -47,6 +49,3 @@ class App(Tk):
 
     def run(self):
         self.mainloop()
-
-    def register_validations(self):
-        self._validations.update({"only_number": self.register(Entry.only_numbers)})
