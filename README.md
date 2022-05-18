@@ -5,7 +5,8 @@ A Tkinter App made to manage my bills and credit cards using python and Tkinter.
 ### How to run
 
 At first you need to have the [Python-3.8](https://www.python.org/downloads/), the `python3-tk` and the `python3-pip` packages installed. 
-Once you installed these two packages install, clone this repository with the command below:
+
+Once you installed these two packages, clone this repository with the command below:
 ```bash
 # cloning repository
 git clone git@github.com:oopaze/Contas-Organizer.git
