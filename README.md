@@ -24,10 +24,10 @@ and then install, create and activate a virtual environment (Optional):
 python3 -m pip install virtualenv
 
 # creating a virtual environment
-python3 -m virtualenv .env
+python3 -m virtualenv .venv
 
 # activating the virtual environment
-source .env/bin/activate
+source .venv/bin/activate
 ```
 <sup>Why should we use virtual environment in python? [Read more about](https://towardsdatascience.com/why-you-should-use-a-virtual-environment-for-every-python-project-c17dab3b0fd0)!</sup>
 
