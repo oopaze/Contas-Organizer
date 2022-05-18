@@ -2,6 +2,7 @@
 
 A Tkinter App made to manage my bills and credit cards using python and Tkinter.
 
+![Contas Organizer Home Screen](https://github.com/oopaze/Contas-Organizer/blob/main/home-screen.jpg?raw=true)
 
 ### How to run
 
