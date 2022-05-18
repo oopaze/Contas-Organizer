@@ -18,7 +18,7 @@ after clone the repository, enter in the project folder:
 cd Contas-Organizer
 ```
 
-and then install, create and activate a virtual environment:
+and then install, create and activate a virtual environment (Optional): Why should we use virtual environment in python? [Read more about](https://towardsdatascience.com/why-you-should-use-a-virtual-environment-for-every-python-project-c17dab3b0fd0)!
 ```bash
 # instaling the virtual environment module
 python3 -m pip install virtualenv
@@ -29,7 +29,6 @@ python3 -m virtualenv .env
 # activating the virtual environment
 source .env/bin/activate
 ```
-<sub>Why should we use virtual environment in python? [Read more about](https://towardsdatascience.com/why-you-should-use-a-virtual-environment-for-every-python-project-c17dab3b0fd0)!</sub>
 
 Now, with our virtual enviroment set, we are able to install all dependencies of our project. To install all dependencies, just run the following command:
 ```
