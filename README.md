@@ -2,8 +2,6 @@
 
 A Tkinter App made to manage my bills and credit cards using python and Tkinter.
 
-![Contas Organizer Home Screen](https://github.com/oopaze/Contas-Organizer/blob/main/home-screen.jpg?raw=true)
-
 ### How to run
 
 At first you need to have the [Python-3.8](https://www.python.org/downloads/), the `python3-tk` and the `python3-pip` packages installed. 
@@ -44,4 +42,7 @@ If everything goes ok, you project is ready to run just running the `run.py` fil
 python run.py
 ```
 
+### Spoiler
+
+![Contas Organizer Home Screen](https://raw.githubusercontent.com/oopaze/Contas-Organizer/main/home-screen.png)
 
